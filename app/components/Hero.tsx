@@ -4,8 +4,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1492288991661-058aa541ff43?auto=format&fit=crop&w=2000&q=80";
+const HERO_IMAGE = "/looks/hero.jpg";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);

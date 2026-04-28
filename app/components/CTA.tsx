@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function CTA() {
@@ -8,7 +9,20 @@ export default function CTA() {
       id="order"
       className="relative py-32 md:py-56 px-6 md:px-10 border-b border-white/10 overflow-hidden"
     >
-      <div className="mx-auto max-w-[1400px] text-center">
+      <div className="absolute inset-0 pointer-events-none">
+        <Image
+          src="/looks/cta-bg.jpg"
+          alt=""
+          fill
+          aria-hidden
+          loading="lazy"
+          sizes="100vw"
+          className="object-cover opacity-20 grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black" />
+      </div>
+
+      <div className="relative mx-auto max-w-[1400px] text-center">
         <motion.span
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}

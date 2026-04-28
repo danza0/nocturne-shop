@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const text =
@@ -13,7 +14,7 @@ export default function About() {
       id="about"
       className="relative py-32 md:py-48 px-6 md:px-10 border-b border-white/10"
     >
-      <div className="mx-auto max-w-[1400px] grid grid-cols-1 md:grid-cols-12 gap-10">
+      <div className="mx-auto max-w-[1400px] grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -26,8 +27,8 @@ export default function About() {
           </span>
         </motion.div>
 
-        <div className="md:col-span-9">
-          <p className="text-[clamp(1.5rem,3.2vw,3rem)] leading-[1.2] tracking-[-0.01em] font-light">
+        <div className="md:col-span-6">
+          <p className="text-[clamp(1.5rem,3vw,2.75rem)] leading-[1.2] tracking-[-0.01em] font-light">
             {words.map((word, i) => (
               <motion.span
                 key={i}
@@ -46,6 +47,23 @@ export default function About() {
             ))}
           </p>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-15%" }}
+          transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="md:col-span-3 relative aspect-[3/4] overflow-hidden bg-[#111]"
+        >
+          <Image
+            src="/looks/about.jpg"
+            alt="NØCTURNE — деталь"
+            fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 25vw"
+            className="object-cover grayscale"
+          />
+        </motion.div>
       </div>
     </section>
   );
