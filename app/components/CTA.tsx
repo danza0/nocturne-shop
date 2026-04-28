@@ -40,9 +40,9 @@ export default function CTA() {
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
           className="text-[clamp(2.5rem,8vw,9rem)] font-semibold leading-[0.95] tracking-[-0.02em] mb-14"
         >
-          Готовий
+          Будь
           <br />
-          одягти ніч?
+          гордим.
         </motion.h2>
 
         <motion.div

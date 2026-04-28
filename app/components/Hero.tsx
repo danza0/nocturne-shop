@@ -50,7 +50,7 @@ export default function Hero() {
           transition={{ duration: 1.4, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="overflow-hidden"
         >
-          <h1 className="font-semibold leading-[0.9] tracking-[-0.02em] text-[clamp(4rem,18vw,16rem)]">
+          <h1 className="font-semibold leading-[0.9] tracking-[-0.02em] text-[clamp(2.75rem,11vw,9rem)]">
             NØCTURNE
           </h1>
         </motion.div>
